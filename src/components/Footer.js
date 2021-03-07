@@ -4,11 +4,11 @@ import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp'
 import IconButton from '@material-ui/core/IconButton'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import InstagramIcon from '@material-ui/icons/Instagram'
-import TwitterIcon from '@material-ui/icons/Twitter'
-import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import FacebookIcon from '@material-ui/icons/Facebook'
 /*import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWordpress } from '@fortawesome/free-brands-svg-icons'
+import TwitterIcon from '@material-ui/icons/Twitter'
+import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import { faCodepen } from '@fortawesome/free-brands-svg-icons'*/
 
 const Footer = () => <footer>
@@ -61,7 +61,7 @@ const Footer = () => <footer>
                 <InstagramIcon fontSize="inherit" />
             </IconButton>
         </li>
-        <li>
+        {/*<li>
             <IconButton
                 aria-label="Twitter"
                 size="medium"
@@ -72,7 +72,7 @@ const Footer = () => <footer>
             >
                 <TwitterIcon fontSize="inherit" />
             </IconButton>
-        </li>
+        </li>*/}
         <li>
             <IconButton
                 aria-label="Facebook"
@@ -85,7 +85,7 @@ const Footer = () => <footer>
                 <FacebookIcon fontSize="inherit" />
             </IconButton>
         </li>
-        <li>
+        {/*<li>
             <IconButton
                 aria-label="LinkedIn"
                 size="medium"
@@ -96,7 +96,7 @@ const Footer = () => <footer>
             >
                 <LinkedInIcon fontSize="inherit" />
             </IconButton>
-        </li>
+        </li>*/}
     </ul>
     <p>
         Copyright &copy; {new Date().getFullYear()}
