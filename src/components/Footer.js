@@ -99,8 +99,7 @@ const Footer = () => <footer>
         </li>*/}
     </ul>
     <p>
-        Copyright &copy; {new Date().getFullYear()}
-        {' '}Christina Voudouris. All rights reserved.
+        &copy; {new Date().getFullYear()} Christina Voudouris. All rights reserved.
     </p>
     <a href="#top" alt="top">
         <Fab style={fabStyle} aria-label="arrowupward">
