@@ -47,7 +47,7 @@ const Contact = () => {
         >
             <input type="hidden" name="form-name" value="contact" />
             <TextField
-                id="outlined-basic"
+                id="Name"
                 label="Name"
                 aria-label="Name"
                 variant="outlined"
@@ -56,7 +56,7 @@ const Contact = () => {
             />
 
             <TextField
-                id="outlined-basic"
+                id="Email"
                 label="Email"
                 aria-label="Email"
                 variant="outlined"
@@ -66,7 +66,7 @@ const Contact = () => {
             />
 
             <TextField
-                id="outlined-multiline-static"
+                id="Message"
                 label="Message"
                 aria-label="Message"
                 multiline
