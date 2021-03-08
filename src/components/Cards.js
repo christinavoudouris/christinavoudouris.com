@@ -38,7 +38,7 @@ const Cards = () => <Container width="lg" id="services" style={{ marginTop: '20p
                 </CardActionArea>
                 <CardActions>
                     <Button size="small" color="inherit">
-                        <Link to='/services#services' alt="Learn More" style={{ color: 'black' }}>Learn More</Link>
+                        <Link to='/services#services' aria-label="Learn more about basic site and React app options" style={{ color: 'black' }}>Learn More</Link>
                     </Button>
                 </CardActions>
             </Card>
@@ -66,7 +66,7 @@ const Cards = () => <Container width="lg" id="services" style={{ marginTop: '20p
                 </CardActionArea>
                 <CardActions>
                     <Button size="small" color="inherit">
-                        <Link to='/services#services' alt="Learn More" style={{ color: 'black' }}>Learn More</Link>
+                        <Link to='/services#services' aria-label="Learn more about full stack app options" style={{ color: 'black' }}>Learn More</Link>
                     </Button>
                 </CardActions>
             </Card>
