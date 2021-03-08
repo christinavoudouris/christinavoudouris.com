@@ -30,7 +30,7 @@ const Home = () => <div className="wrapper">
 const buttonStyle = {
     borderRadius: '5px',
     color: 'white',
-    backgroundColor: '#E53935',
+    backgroundColor: '#A02725',
     padding: '14px 28px',
     fontFamily: 'Helvetica", sans-serif',
     fontWeight: '400',

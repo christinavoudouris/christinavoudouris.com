@@ -30,10 +30,10 @@ const Cards = () => <Container width="lg" id="services" style={{ marginTop: '20p
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">
                             Basic Site or React App
-                            </Typography>
+                        </Typography>
                         <Typography variant="body2" color="textSecondary" component="p">
                             Get a blazing fast, fully responsive website with up to five pages, or five sections on a single page. Level up with React when you need to.
-                            </Typography>
+                        </Typography>
                     </CardContent>
                 </CardActionArea>
                 <CardActions>
@@ -58,10 +58,10 @@ const Cards = () => <Container width="lg" id="services" style={{ marginTop: '20p
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">
                             Full Stack App / Site
-                            </Typography>
+                        </Typography>
                         <Typography variant="body2" color="textSecondary" component="p">
                             Need a database? Go MERN stack. Love WordPress? You can have the best of both worlds: WordPress content with the speed of React.
-                            </Typography>
+                        </Typography>
                     </CardContent>
                 </CardActionArea>
                 <CardActions>

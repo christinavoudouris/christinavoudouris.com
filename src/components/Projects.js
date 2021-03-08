@@ -1,23 +1,11 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
-import Post from './Post'
+import React from 'react'
+import Card from '@material-ui/core/Card'
+import CardContent from '@material-ui/core/CardContent'
 
-function Blog() {
-    const [state, setState] = useState({})
-    const [isLoaded, setIsLoaded] = useState(false)
+const Projects = () => <Card style={{ width: '95%', margin: '20px auto' }}>
+    <CardContent>
+        <h1>Coming soon.</h1>
+    </CardContent>
+</Card>
 
-    useEffect(() => {
-        axios.get('https://projects.christinavoudouris.com/wp-json/wp/v2/posts?categories=19')
-            .then(res => {
-                let posts = res.data
-                setState({ posts })
-                setIsLoaded(true)
-            })
-            .catch(err => console.log(err))
-    }, [])
-
-    const { posts } = state
-    return isLoaded ? posts.map(post => <Post key={post.id} post={post} />) : null
-}
-
-export default Blog
+export default Projects
