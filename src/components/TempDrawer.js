@@ -57,7 +57,7 @@ export default function TempDrawer() {
                 </NavLink>
             </ListItem>
             <ListItem>
-                <NavLink className="drawer" to="/services">
+                <NavLink className="drawer" to="/#services">
                     <ListItemIcon style={{ verticalAlign: 'middle' }} >
                         <WebIcon />
                     </ListItemIcon>
@@ -65,7 +65,7 @@ export default function TempDrawer() {
                 </NavLink>
             </ListItem>
             <ListItem>
-                <NavLink className="drawer" to="/projects">
+                <NavLink className="drawer" to="/#services">
                     <ListItemIcon style={{ verticalAlign: 'middle' }}>
                         <FavoriteIcon />
                     </ListItemIcon>

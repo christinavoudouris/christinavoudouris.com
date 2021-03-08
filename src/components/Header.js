@@ -20,7 +20,7 @@ const Header = () => <>
                 <NavLink to="/#services" alt="Services">SERVICES</NavLink>
             </li>
             <li>
-                <Link to="/projects" alt="Projects">PROJECTS</Link>
+                <NavLink to="/#services" alt="Projects">PROJECTS</NavLink>
             </li>
             <li>
                 <NavLink to="/#contact" alt="Contact" rel="noopener noreferrer">
