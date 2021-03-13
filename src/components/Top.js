@@ -147,7 +147,7 @@ export default function Top() {
             color="default"
           />
         }
-        label="dark mode?"
+        label="Dim mode?"
         style={{ float: 'right' }}
       />
     </>
