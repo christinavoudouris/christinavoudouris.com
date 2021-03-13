@@ -1,17 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import TempDrawer from './TempDrawer'
+import Top from './Top'
 import { NavHashLink as NavLink } from 'react-router-hash-link'
 
 const Header = () => <>
-    <Link to="/" name="top" aria-label="Top of page"> </Link>
-    <TempDrawer />
-    <div className="header">
-        <Link to="/">
-            <img className="me" width="90" height="90" src="https://projects.christinavoudouris.com/wp-content/uploads/2020/08/me-lg.jpg" alt="me" />
-            <p className="title">Christina Voudouris</p>
-            <p className="subtitle">MERN Stack Developer</p>
-        </Link>
+    <Top />
+    <header>
+        <img className="me" width="90" height="90" src="https://projects.christinavoudouris.com/wp-content/uploads/2020/08/me-lg.jpg" alt="me" />
+        <p className="title">Christina Voudouris</p>
+        <p className="subtitle">MERN Stack Developer</p>
         <ul className="nav">
             <li>
                 <NavLink to="/" alt="Home">HOME</NavLink>
@@ -28,7 +24,7 @@ const Header = () => <>
                 </NavLink>
             </li>
         </ul>
-    </div>
+    </header>
 </>
 
 export default Header

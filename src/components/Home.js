@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid'
 import PanToolIcon from '@material-ui/icons/PanTool'
 import { HashLink as Link } from 'react-router-hash-link'
 
-const Home = () => <div className="wrapper">
+const Home = () => <div id="wrapper">
     <Container maxWidth="sm">
         <h1 className="headline"><PanToolIcon fontSize="large" /> I'm an experienced, Philly-based full stack web developer.</h1>
         <h2 className="desc">

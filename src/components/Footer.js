@@ -5,6 +5,7 @@ import IconButton from '@material-ui/core/IconButton'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import InstagramIcon from '@material-ui/icons/Instagram'
 import FacebookIcon from '@material-ui/icons/Facebook'
+import { HashLink as Link } from 'react-router-hash-link'
 
 const Footer = () => <footer>
     <ul className="social">
@@ -48,11 +49,11 @@ const Footer = () => <footer>
     <p>
         &copy; {new Date().getFullYear()} Christina Voudouris. All rights reserved.
     </p>
-    <a href="#top" alt="top">
+    <Link to="#top" aria-label="go to top">
         <Fab style={fabStyle} aria-label="arrowupward">
             <KeyboardArrowUpIcon fontSize="large" />
         </Fab>
-    </a>
+    </Link>
 </footer>
 
 const fabStyle = {

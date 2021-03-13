@@ -12,6 +12,8 @@ import FavoriteIcon from '@material-ui/icons/Favorite'
 import MailIcon from '@material-ui/icons/Mail'
 import MenuIcon from '@material-ui/icons/Menu'
 import { NavHashLink as NavLink } from 'react-router-hash-link'
+import FormControlLabel from '@material-ui/core/FormControlLabel'
+import Checkbox from '@material-ui/core/Checkbox'
 
 const useStyles = makeStyles({
     list: {
@@ -25,14 +27,41 @@ const useStyles = makeStyles({
     }
 })
 
-export default function TempDrawer() {
+export default function Top() {
     const classes = useStyles()
-    const [state, setState] = useState({
-        left: false
-    })
+    const [state, setState] = useState({ left: false })
 
-    const toggleDrawer = (anchor, open) => (event) => {
-        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+    let toggledClass = 'toggled'
+    let body = document.body
+    const lightMode = 'light'
+    const darkMode = 'dark'
+    let mode
+
+    if (localStorage) {
+        mode = localStorage.getItem('mode')
+      }
+    
+    mode === lightMode || mode === darkMode
+        ? body.classList.add(mode)
+        : body.classList.add(lightMode)
+    
+    const switchMode = e => {
+        if (mode === darkMode) {
+            body.classList.replace(darkMode, lightMode)
+            e.target.classList.remove(toggledClass)
+            body.classList.toggle(toggledClass)
+            localStorage.setItem('mode', 'light')
+            mode = lightMode
+        } else {
+            body.classList.replace(lightMode, darkMode)
+            e.target.classList.add(toggledClass)
+            localStorage.setItem('mode', 'dark')
+            mode = darkMode
+        }
+    }
+
+    const toggleDrawer = (anchor, open) => e => {
+        if (e.type === 'keydown' && (e.key === 'Tab' || e.key === 'Shift')) {
             return
         }
 
@@ -46,6 +75,7 @@ export default function TempDrawer() {
         role="presentation"
         onClick={toggleDrawer(anchor, false)}
         onKeyDown={toggleDrawer(anchor, false)}
+        id="top"
     >
         <List>
             <ListItem>
@@ -83,10 +113,10 @@ export default function TempDrawer() {
         </List>
     </div>
 
-    return <div style={{ backgroundColor: 'white' }}>
-        {['left'].map((anchor) => (<Fragment key={anchor}>
+    return <>
+        {['left'].map(anchor => <Fragment key={anchor}>
             <Button
-                style={{ padding: '0', backgroundColor: 'white' }}
+                style={{ padding: '0' }}
                 aria-label="open menu"
                 onClick={toggleDrawer(anchor, true)}
             >
@@ -95,7 +125,8 @@ export default function TempDrawer() {
                     style={{
                         color: "#666666",
                         marginTop: '7px',
-                        padding: '0'
+                        padding: '0', 
+                        backgroundColor: 'transparent'
                     }}
                 />}
             </Button>
@@ -106,6 +137,18 @@ export default function TempDrawer() {
             >
                 {list(anchor)}
             </Drawer>
-        </Fragment>))}
-    </div>
+        </Fragment>)}
+        <FormControlLabel
+        control={
+          <Checkbox
+            className={mode === "dark" ? toggledClass : ""}
+            id="darkMode"
+            onClick={e => switchMode(e)}
+            color="default"
+          />
+        }
+        label="dark mode?"
+        style={{ float: 'right' }}
+      />
+    </>
 }
